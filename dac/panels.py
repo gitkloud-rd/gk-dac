@@ -42,12 +42,12 @@ class PanelLibrary:
     def net_panel(self) -> dict:
         net_panel = {
                     "type": "stat",
-                    "title": "CPU Usage",
+                    "title": "Network Usage",
                     "datasource": "Prometheus",
 
                     "targets": [
                         {
-                            "expr": "node_cpu_seconds_total{namespace='monitoring'}",
+                            "expr": "up{namespace='monitoring', service='prometheus'}",
                             "legendFormat": "{{pod}}",
                             "refId": "A"
                         }
