@@ -27,12 +27,16 @@ dashboard_payload = {
     "tags": ["k8s", "mlt"],
     "overwrite": True
 }
+
 dashboard_payload2 = {
     "dashboard": {
         "id": None,  # Creates a new dashboard
         "uid": "new_dashboard_uid",
         "title": "K8S MLT view Dashboard2",
-        "panels": [pl.cpu_panel("cpu"), pl.mem_panel("mem"), pl.net_panel("net")],
+        "panels": [pl.cpu_panel("cpu"),
+                   pl.mem_panel("mem"),
+                   pl.net_panel("net"),
+                   pl.log_panel("log")],
         "timezone": "browser",
     },
     "tags": ["k8s", "mlt"],
